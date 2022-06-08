@@ -1,0 +1,49 @@
+.Navbar_main{
+    background: #fff;
+    margin: 0 2%; 
+    padding: 8px 0;  
+}
+.Navbar_main .nav_contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_contents .left_nav{
+    display: flex;
+    align-items: center;
+}
+.nav_contents .right_nav{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav_contents .right_nav span{
+    font-weight: 500;
+    font-size: 13px;
+    color: black;
+}
+.nav_contents .left_nav span{
+    font-weight: 500;
+    font-size: 15px;
+    color: #489C2A;
+}
+.nav_contents .left_nav .logo img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+.nav_contents .right_nav .shoping_cart img{
+    width: 30px;
+    margin-left: 5px;
+}
+.right_nav span{
+    cursor: pointer;
+}
+.right_nav .shoping_cart{
+    cursor: pointer;
+}
+.logo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

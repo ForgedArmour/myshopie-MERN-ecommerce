@@ -1,0 +1,75 @@
+.admin_prod_item td img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+.admin_products_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+    overflow-x: auto;
+
+}
+table{
+    display: block;
+    overflow: scroll;
+}
+.admin_products_container table{
+    border-collapse: collapse;
+    padding: 10px;
+    table-layout:fixed;
+    /* width: 100%; */
+    font-size: 0.85rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-spacing: 10px;
+}
+thead tr th{
+    margin-left: 50px;
+}
+.admin_prod_item button{
+    margin-left: 10px;
+}
+th,td{
+    border-bottom: 1px solid #dddddd;
+    /* word-break: break-all; */
+    text-align: center;
+    padding: 6px 10px;
+}
+td button:nth-child(1){
+    border: none;
+    background-color: #0d6efd;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+td button:nth-child(2){
+    border: none;
+    background-color: #dc3545;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+.add_prod_btn{
+    border: none;
+    background-color: #0d6efd;
+    padding: 6px 8px;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+@media(max-width:450px){
+    .admin_products_container table{
+        width: 100%;
+    }
+}
