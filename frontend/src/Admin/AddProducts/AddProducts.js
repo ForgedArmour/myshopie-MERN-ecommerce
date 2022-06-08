@@ -9,10 +9,9 @@ export default function AddProducts() {
     const [fileup,setFileup] = useState(null);
     let navigate = useNavigate()
     const [proddetail,setProdDetail] = useState({})
-    const { addProduct,setProgress } = useContext(ecomContext);
+    const { addProduct } = useContext(ecomContext);
     
     const handleSubmitProd = async (e)=>{
-        setProgress(10)
         e.preventDefault();
         if(proddetail.name && proddetail.description && proddetail.price && proddetail.rating && fileup!==null)
         {
@@ -28,7 +27,6 @@ export default function AddProducts() {
             },
             complete:()=>{
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    setProgress(50)
                     addProduct(proddetail,downloadURL);
                     navigate("/admin")
 

@@ -7,7 +7,6 @@ export default function EcomStates(props) {
     const [isLogin, setIsLogin] = useState(localStorage.getItem("token") ? true : false);
     const [products,setProducts] = useState([])
     const [isAdmin,setIsAdmin] = useState(localStorage.getItem("admin")==="true" ? true : false)
-    const [progress,setProgress] = useState(0);
     const addProduct = async(prod,image)=>{
         prod.image = image
         const res = await axios.post(`${host}/addproduct`, prod,{
@@ -15,12 +14,8 @@ export default function EcomStates(props) {
                 auth_token:localStorage.getItem("token")
             }
         })
-        setProgress(100)
         if (res.data.status === "ok") {
             setProducts((prev)=>[res.data.product,...prev])
-        }
-        else{
-            console.log(res.data.message);
         }
     }
     const fetchProducts = async()=>{
@@ -61,7 +56,7 @@ export default function EcomStates(props) {
     }
 
     const qstnValues = {
-        login,signup,isLogin,fetchProducts,products,setIsLogin,isAdmin,addProduct,progress,setProgress
+        login,signup,isLogin,fetchProducts,products,setIsLogin,isAdmin,addProduct
     }
     return (
         <ecomContext.Provider value={qstnValues}>

@@ -12,17 +12,11 @@ import Signup from './Registration/Signup';
 import ecomContext from "./context/Ecommerce"
 import React, { useContext } from 'react'
 import AddProducts from './Admin/AddProducts/AddProducts';
-import LoadingBar from 'react-top-loading-bar'
 function App() {
-  const { isAdmin,progress } = useContext(ecomContext);
+  const { isAdmin } = useContext(ecomContext);
   return (
     <Router>
       <Navbar />
-      <LoadingBar
-        color='#f11946'
-        progress={progress}
-        height={2.73}
-      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
