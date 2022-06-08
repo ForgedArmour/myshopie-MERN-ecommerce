@@ -3,7 +3,7 @@ import ecomContext from './Ecommerce'
 import axios from 'axios'
 
 export default function EcomStates(props) {
-    const host = `http://localhost:5000/api`
+    const host = `https://shopieecom.herokuapp.com/api`
     const [isLogin, setIsLogin] = useState(localStorage.getItem("token") ? true : false);
     const [products,setProducts] = useState([])
     const [isAdmin,setIsAdmin] = useState(localStorage.getItem("admin")==="true" ? true : false)
