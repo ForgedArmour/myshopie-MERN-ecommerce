@@ -34,9 +34,7 @@ export default function AddProducts() {
             }
             }
             );
-            
-    
-          
+              
         }
       }
       const handleFormChange = (e)=>{
