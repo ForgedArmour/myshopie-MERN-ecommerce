@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="right_nav">
               {!isLogin && <><Link to={'/signup'}><span>Register</span></Link>
               <Link to={'/login'}><span>Login</span></Link></>}
-              {isLogin && <><Link to={'/admin'} onClick={handleLogout}><span>Admin</span></Link><Link to={'/'} onClick={handleLogout}><span>Logout</span></Link></>}
+              {isLogin && <><Link to={'/admin'}><span>Admin</span></Link><Link to={'/'} onClick={handleLogout}><span>Logout</span></Link></>}
             <div className="shoping_cart">
               <img src={cart} alt="" />
             </div>
